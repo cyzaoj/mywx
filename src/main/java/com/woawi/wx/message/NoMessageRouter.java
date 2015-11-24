@@ -22,7 +22,8 @@ import java.util.Map;
 
 public class NoMessageRouter implements WxMpMessageHandler {
     @Override
-    public WxMpXmlOutMessage handle(WxMpXmlMessage wxMessage, Map<String, Object> context, WxMpService wxMpService, WxSessionManager sessionManager) throws WxErrorException {
+    public WxMpXmlOutMessage handle(WxMpXmlMessage wxMessage, Map<String, Object> context, WxMpService wxMpService, WxSessionManager sessionManager)
+            throws WxErrorException {
         MessageSource source = Environment.getI18n();
         String msg = source.getMessage("message.noregex", null, Locale.getDefault());
         WxMpXmlOutTextMessage m
