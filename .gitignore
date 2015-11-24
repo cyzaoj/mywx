@@ -15,5 +15,5 @@ hs_err_pid*
 ja
 *.iml
 .idea
-/logs
+logs
 *.log
