@@ -1,9 +1,10 @@
 package com.woawi.wx.server.config;
 
-import com.woawi.wx.message.NoMessageRouter;
+import com.woawi.wx.message.FocusMeMessage;
 import com.woawi.wx.server.properties.WxInfo;
 import com.woawi.wx.util.WxMpUtil;
 import lombok.extern.slf4j.Slf4j;
+import me.chanjar.weixin.common.api.WxConsts;
 import me.chanjar.weixin.mp.api.WxMpInMemoryConfigStorage;
 import me.chanjar.weixin.mp.api.WxMpMessageRouter;
 import me.chanjar.weixin.mp.api.WxMpService;
@@ -47,7 +48,19 @@ public class WxConfiguration {
         WxMpMessageRouter wxMpMessageRouter = new WxMpMessageRouter(wxMpService);
 
         WxMpUtil.text(wxMpMessageRouter, false, "test", "This is a test !!!");
-        wxMpMessageRouter.rule().handler(new NoMessageRouter()).end();
+        wxMpMessageRouter.rule()
+                // .msgType(WxConsts.XML_MSG_TEXT)
+                .async(false)
+                .event(WxConsts.EVT_UNSUBSCRIBE)
+                // .eventKey("EVENT_KEY")
+                .handler(new FocusMeMessage())
+                .end()
+                .rule()
+                .async(false)
+                .event(WxConsts.EVT_SUBSCRIBE)
+                .handler(new FocusMeMessage())
+                .end();
+        // wxMpMessageRouter.rule().handler(new NoMessage()).end();
         return wxMpMessageRouter;
     }
 }

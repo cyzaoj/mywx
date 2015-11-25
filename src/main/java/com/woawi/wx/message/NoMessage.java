@@ -20,7 +20,7 @@ import java.util.Map;
  * @date 15/11/23
  */
 
-public class NoMessageRouter implements WxMpMessageHandler {
+public class NoMessage implements WxMpMessageHandler {
     @Override
     public WxMpXmlOutMessage handle(WxMpXmlMessage wxMessage, Map<String, Object> context, WxMpService wxMpService, WxSessionManager sessionManager)
             throws WxErrorException {
