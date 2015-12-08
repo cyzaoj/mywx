@@ -2,10 +2,7 @@ package com.woawi.wx.server;
 
 
 import com.woawi.wx.Environment;
-import com.woawi.wx.message.FocusMeMessage;
 import lombok.extern.slf4j.Slf4j;
-import me.chanjar.weixin.common.api.WxConsts;
-import me.chanjar.weixin.mp.api.WxMpMessageRouter;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
@@ -29,7 +26,7 @@ public class ApplicationStartUp implements ApplicationListener<ContextRefreshedE
         Environment.setI18n(context);
 
 
-        WxMpMessageRouter router = context.getBean(WxMpMessageRouter.class);
+        // WxMpMessageRouter router = context.getBean(WxMpMessageRouter.class);
 
 
     }

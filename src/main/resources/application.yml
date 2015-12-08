@@ -1,6 +1,6 @@
 #server settings
 server:
-    port : 8089
+    port : 8080
     address : localhost
     sessionTimeout : 30
     #contextPath : /
