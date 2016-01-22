@@ -1,6 +1,5 @@
 package com.tuicr.mywx.message;
 
-import com.tuicr.mywx.Environment;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.api.WxConsts;
 import me.chanjar.weixin.common.exception.WxErrorException;
@@ -28,15 +27,14 @@ public class FocusMeMessage implements WxMpMessageHandler {
 
     @Override
     public WxMpXmlOutMessage handle(WxMpXmlMessage wxMessage, Map<String, Object> context, WxMpService wxMpService, WxSessionManager sessionManager) throws WxErrorException {
-        MessageSource source = Environment.getI18n();
-        String msg = source.getMessage("message.welcome", null, Locale.getDefault());
+       // String msg = source.getMessage("message.welcome", null, Locale.getDefault());
         String event = StringUtils.isBlank(wxMessage.getEvent()) ? StringUtils.EMPTY : wxMessage.getEvent();
         WxMpXmlOutTextMessage m = null;
         if (WxConsts.EVT_SUBSCRIBE.equals(event)) {
             m
                     = WxMpXmlOutMessage
                     .TEXT()
-                    .content(msg)
+                    .content("message.welcome")
                     .fromUser(wxMessage.getToUserName())
                     .toUser(wxMessage.getFromUserName())
                     .build();
