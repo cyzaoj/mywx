@@ -1,7 +1,6 @@
-package com.tuicr.mywx.server;
+package com.tuicr.mywx;
 
 
-import com.tuicr.mywx.Environment;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationListener;
@@ -23,7 +22,6 @@ public class ApplicationStartUp implements ApplicationListener<ContextRefreshedE
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
         ApplicationContext context = event.getApplicationContext();
-        Environment.setI18n(context);
 
 
         // WxMpMessageRouter router = context.getBean(WxMpMessageRouter.class);
