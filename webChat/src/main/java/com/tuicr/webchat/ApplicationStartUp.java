@@ -1,4 +1,4 @@
-package com.tuicr.mywx;
+package com.tuicr.webchat;
 
 
 import lombok.extern.slf4j.Slf4j;
