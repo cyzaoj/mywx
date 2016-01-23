@@ -28,4 +28,9 @@ public class DataModelResult<T> {
      * 错误消息
      */
     private String message;
+
+    /**
+     * 时间
+     */
+    private long timestamp = System.currentTimeMillis();
 }
