@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>mywx-notify</artifactId>
+    <artifactId>webChat</artifactId>
 
     <dependencies>
 
@@ -47,6 +47,11 @@
             <artifactId>zkclient</artifactId>
         </dependency>-->
 
+
+        <dependency>
+            <groupId>io.reactivex</groupId>
+            <artifactId>rxjava</artifactId>
+        </dependency>
         <dependency>
             <groupId>me.chanjar</groupId>
             <artifactId>weixin-java-mp</artifactId>
