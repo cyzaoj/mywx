@@ -1,8 +1,8 @@
-package com.tuicr.mywx.server.config;
+package com.tuicr.webchat.server.config;
 
-import com.tuicr.mywx.message.FocusMeMessage;
-import com.tuicr.mywx.util.WxMpUtil;
-import com.tuicr.mywx.server.properties.WxInfo;
+import com.tuicr.webchat.message.FocusMeMessage;
+import com.tuicr.webchat.server.properties.WxOauth;
+import com.tuicr.webchat.util.WxMpUtil;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.api.WxConsts;
 import me.chanjar.weixin.mp.api.WxMpInMemoryConfigStorage;
@@ -21,11 +21,11 @@ import org.springframework.context.annotation.Configuration;
  */
 @Slf4j
 @Configuration
-@EnableConfigurationProperties(WxInfo.class)
+@EnableConfigurationProperties(WxOauth.class)
 public class WxConfiguration {
 
     @Bean
-    public WxMpInMemoryConfigStorage wxMpInMemoryConfigStorage(WxInfo info) {
+    public WxMpInMemoryConfigStorage wxMpInMemoryConfigStorage(WxOauth info) {
         WxMpInMemoryConfigStorage config = new WxMpInMemoryConfigStorage();
         config.setAppId(info.getAppId()); // 设置微信公众号的appid
         config.setSecret(info.getSecret()); // 设置微信公众号的app corpSecret

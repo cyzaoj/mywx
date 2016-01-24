@@ -1,4 +1,4 @@
-package com.tuicr.server;
+package com.tuicr.webchat.server;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

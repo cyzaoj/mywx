@@ -1,7 +1,7 @@
-package com.tuicr.mywx.server.config;
+package com.tuicr.webchat.server.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.tuicr.mywx.server.properties.DataSourceProperties;
+import com.tuicr.webchat.server.properties.DataSourceProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

@@ -1,6 +1,6 @@
-package com.tuicr.mywx.controller;
+package com.tuicr.webchat.controller;
 
-import com.tuicr.server.DataModelResult;
+import com.tuicr.webchat.server.DataModelResult;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.bean.WxMenu;
 import me.chanjar.weixin.common.bean.result.WxError;

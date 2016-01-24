@@ -1,4 +1,4 @@
-package com.tuicr.server;
+package com.tuicr.webchat.server;
 
 import lombok.Data;
 

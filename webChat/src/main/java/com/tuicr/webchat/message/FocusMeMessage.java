@@ -1,4 +1,4 @@
-package com.tuicr.mywx.message;
+package com.tuicr.webchat.message;
 
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.api.WxConsts;

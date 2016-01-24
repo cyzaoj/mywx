@@ -1,4 +1,4 @@
-package com.tuicr.mywx.util;
+package com.tuicr.webchat.util;
 
 import me.chanjar.weixin.mp.api.WxMpMessageHandler;
 import me.chanjar.weixin.mp.api.WxMpMessageRouter;

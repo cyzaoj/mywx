@@ -1,4 +1,4 @@
-package com.tuicr.mywx.message;
+package com.tuicr.webchat.message;
 
 import me.chanjar.weixin.common.exception.WxErrorException;
 import me.chanjar.weixin.common.session.WxSessionManager;

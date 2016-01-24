@@ -1,4 +1,4 @@
-package com.tuicr.mywx.server.properties;
+package com.tuicr.webchat.server.properties;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

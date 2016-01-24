@@ -1,4 +1,4 @@
-package com.tuicr.mywx.controller;
+package com.tuicr.webchat.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.mp.api.WxMpConfigStorage;
